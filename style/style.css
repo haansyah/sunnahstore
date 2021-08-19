@@ -4,10 +4,6 @@ html, body{
   overflow-x: hidden;
 }
 
-body{
-  margin-bottom: 400px;
-}
-
 *{
   font-family: 'Lato', sans-serif;
   box-sizing: border-box;
@@ -322,16 +318,28 @@ body{
 /* End List Category */
 
 /* Start List New Product */
-.new-product,
+.new-product .container{
+  padding-bottom: 65px;
+  border-bottom: 1px solid var(--AccentGray01);
+}
+
+.new-product{
+  margin-bottom: 35px;
+}
+
 .recommendation-product{
-  margin-top: 40px;
+  margin-bottom: 82px;
 }
 
 .new-product .title,
-.recommendation-product .title{
-  font-size: 24px;
+.recommendation-product .title,
+.wawasan-usaha .title{
+  font-size: 23px;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 54px;
+  color: #000;
+  text-transform: uppercase;
+  
 }
 
 .new-product .list-new-product .item-new-product,
@@ -390,6 +398,11 @@ body{
   font-weight: 600;
   color: var(--AccentBlack01);
   margin-bottom: 5px;
+  overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 2; /* number of lines to show */
+   -webkit-box-orient: vertical;
 }
 
 .new-product .list-new-product .item-new-product .desc-new-product .price,
@@ -483,27 +496,110 @@ body{
 @media only screen and (max-width: 575px){
 
   .like-n-add-to-cart .like{
-    flex-basis: 25%;
+    flex-basis: 50%;
   }
 
   .like-n-add-to-cart .add-to-cart{
-    flex-basis: 75%;
-  }
-  /* .new-product .container,
-  .recommendation-product .container
-  {
-    padding: 0;
-  }
-  .new-product .title,
-  .recommendation-product .title
-  {
-    padding: 0 24px;
+    flex-basis: 50%;
   }
 
-  .new-product .list-new-product .owl-stage-outer,
-  .recommendation-product .list-recommendation-product .owl-stage-outer
-  {
-    padding-left: 7.5px;
-  } */
+  .like-n-add-to-cart .add-to-cart span{
+    display: none;
+  }
+
+  .like-n-add-to-cart .add-to-cart img{
+    margin-right: 0;
+  }
 }
 /* End List New Product */
+
+/* Start : Wawasan Usaha */
+.wawasan-usaha{
+  background: var(--AccentGray04);
+  padding: 44px 0 75px 0;
+}
+
+.wawasan-usaha .list-item-wawasan-usaha{
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.wawasan-usaha .item-wawasan-usaha{
+  padding: 0;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, .15);
+  background: var(--white);
+  width: calc(100% / 3 - 20px);
+  display: flex;
+}
+
+.item-wawasan-usaha .image{
+  height: 100%;
+  width: auto;
+  overflow: hidden;
+  margin-right: 14px;
+  min-width: 150px;  
+  min-height: 150px;  
+}
+
+.item-wawasan-usaha .image img{
+  height: 100%;
+  width: 100%;
+}
+
+.item-wawasan-usaha .desc-wawasan-usaha{
+  display: flex;
+  flex-direction: column;
+  padding: 13px 13px 13px 0;
+}
+
+.item-wawasan-usaha .desc-wawasan-usaha .title{
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 2; /* number of lines to show */
+   -webkit-box-orient: vertical;
+}
+
+.item-wawasan-usaha .desc-wawasan-usaha .category-wu{
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--AccentDarkGray01);
+}
+
+.item-wawasan-usaha .desc-wawasan-usaha .date-artikel{
+  color: var(--AccentGray02);
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 0;
+  margin-top: auto;
+}
+
+@media only screen and (max-width: 991px){
+  .wawasan-usaha .item-wawasan-usaha{
+    width: calc(100% / 2 - 10px);
+  }
+}
+
+@media only screen and (max-width: 767px){
+  .wawasan-usaha .item-wawasan-usaha{
+    width: 100%;
+  }
+}
+/* End : Wawasan Usaha */
+
+/* START: Footer */
+footer{
+  background: var(--AccentDarkGray01);
+  padding: 50px 0;
+}
+
+footer .copyright{
+  text-align: center;
+  color: var(--white);
+  margin-bottom: 0;
+}
+/* END: Footer */
