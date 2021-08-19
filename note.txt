@@ -1,0 +1,10 @@
+topbar : 549px blm responsive
+
+1. Training
+2. Homepage
+3. Product List
+4. Keranjang Belanja
+5. Product Detail
+6. Pengiriman & Pembayaran
+7. Pengiriman & Pembayaran : Modal
+8. Detail Order

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 html, body{
-  /* overflow: hidden; */
+  overflow-x: hidden;
 }
 
 body{
@@ -134,17 +134,28 @@ body{
 .header-carousel{
   margin-bottom: 50px;
 }
-.header-carousel .owl-carousel .item img{
+
+.header-carousel .owl-carousel .owl-stage{
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 40%;
+}
+
+.header-carousel .owl-carousel .item{
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* .header-carousel .owl-carousel .item img{
   max-height: 400px;
   min-height: 100px;
   height: 100%;
   object-fit: cover;
   object-position: cover;
-}
-
-.header-carousel .owl-carousel{
-  position: relative;
-}
+} */
 
 .header-carousel .owl-carousel .owl-dots{
   position: absolute;
@@ -276,19 +287,24 @@ body{
 {
   /* width: calc(100% / 4 - 20px ); */
   cursor: pointer;
+  overflow: hidden;
 }
 
 .new-product .list-new-product .item-new-product .bg-image,
 .recommendation-product .list-recommendation-product .item-recommendation-product .bg-image
 {
-  width: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  max-height: 281px;
-  height: 200px;
-  min-height: 150px;
-  background-size: cover;
-  padding: 10px;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 100%;
+}
+
+.new-product .list-new-product .item-new-product .bg-image img,
+.recommendation-product .list-recommendation-product .item-recommendation-product .bg-image img{
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .new-product .list-new-product .item-new-product .bg-image .love,
@@ -336,33 +352,5 @@ body{
 /* End List New Product */
 
 /* Start Recommendation Product */
-.wawasan-usaha{
-  margin-top: 40px;
-}
 
-.wawasan-usaha .title{
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
-.wawasan-usaha .list-wawasan-usaha{
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.wawasan-usaha .list-wawasan-usaha .item-wawasan-usaha{
-  display: flex;
-  flex-direction: row;
-  width: calc(100% / 3 - 20px);
-}
-
-.wawasan-usaha .list-wawasan-usaha .item-wawasan-usaha .image{
-  
-}
-
-.wawasan-usaha .list-wawasan-usaha .item-wawasan-usaha img{
-  height: 100%;
-  width: 100%;
-}
 /* End Recommendation Product */
