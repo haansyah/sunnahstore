@@ -29,21 +29,24 @@
       <div class="navbar-contain d-flex justify-content-between align-items-center flex-wrap flex-md-nowrap">
 
         <div class="logo order-1">
-          <img src="https://jasadesainlogo.id/wp-content/uploads/2019/12/solusi-murah-966x675.png" alt="">
+          <img src="./images/logo.png" alt="">
+          <h5>SUNNAH STORE</h5>
         </div>
 
-        <form class="form d-flex search-navbar order-4 order-md-2">
-          <input type="text" placeholder="Kursi Lipat ...">
-          <button class="search">Search</button>
+        <form class="form d-flex search-navbar order-3 order-md-2">
+          <button class="search d-flex"><img src="./images/ic_search.svg" alt=""></button>
+          <input type="text" placeholder="Cari produk disini">
         </form>
 
-        <a href="#" class="keranjang d-flex order-md-3 order-2">
-          <span>Keranjang</span>
-        </a>
-
-        <a href="#" class="user-profile d-flex order-md-4 order-3">
-          <span>Akhyar Maulana</span>
-        </a>
+        <div class="d-flex order-2 order-md-3">
+          <a href="#" class="keranjang">
+            <img src="./images/Group 641.svg" alt="keranjang"><span>Keranjang</span>
+          </a>
+  
+          <a href="#" class="user-profile">
+            <img src="./images/User.svg" alt="user"><span>Akhyar Maulana</span>
+          </a>
+        </div>
 
       </div>
     </div>
@@ -52,12 +55,11 @@
 
   <!-- START: Header -->
   <section class="header-carousel">
-    <div class="container">
-      <div class="owl-carousel owl-theme" id="owl-carousel-01">
-        <img class="item" src="./images/header/images-1.jpg" alt="">
-        <img class="item" src="./images/header/images-1.jpg" alt="">
-        <img class="item" src="./images/header/images-1.jpg" alt="">
-      </div>
+    <div class="owl-carousel owl-theme" id="owl-carousel-01">
+      <img class="item" src="./images/banner.png" alt="">
+      <img class="item" src="./images/banner.png" alt="">
+      <img class="item" src="./images/banner.png" alt="">
+      <img class="item" src="./images/banner.png" alt="">
     </div>
   </section>
   <!-- END: Header -->
@@ -68,51 +70,57 @@
       <div class="list-category d-flex justify-content-between">
         <div class="item-cat">
           <div class="image-cat">
-            <img src="./images/category/category-1.jpg" alt="">
+            <img src="./images/illustration/il_book.png" alt="">
           </div>
-          <p class="title-cat">Kitchen</p>
+          <p class="title-cat">Buku</p>
         </div>
         <div class="item-cat">
           <div class="image-cat">
-            <img src="./images/category/category-2.jpg" alt="">
+            <img src="./images/illustration/il_kitchen.png" alt="">
+          </div>
+          <p class="title-cat">Dapur</p>
+        </div>
+        <div class="item-cat">
+          <div class="image-cat">
+            <img src="./images/illustration/il_camera.png" alt="">
           </div>
           <p class="title-cat">Elektronik</p>
         </div>
         <div class="item-cat">
           <div class="image-cat">
-            <img src="./images/category/category-3.jpg" alt="">
+            <img src="./images/illustration/il_baby.png" alt="">
           </div>
-          <p class="title-cat">Perkakas</p>
+          <p class="title-cat">Anak & Bayi</p>
         </div>
         <div class="item-cat">
           <div class="image-cat">
-            <img src="./images/category/category-1.jpg" alt="">
+            <img src="./images/illustration/il_moslemcloth.png" alt="">
           </div>
-          <p class="title-cat">Memasak</p>
+          <p class="title-cat">Fashion Muslim</p>
         </div>
         <div class="item-cat">
           <div class="image-cat">
-            <img src="./images/category/category-1.jpg" alt="">
+            <img src="./images/illustration/il_mencloth.png" alt="">
           </div>
-          <p class="title-cat">Memasak</p>
+          <p class="title-cat">Fashion Pria</p>
         </div>
         <div class="item-cat">
           <div class="image-cat">
-            <img src="./images/category/category-2.jpg" alt="">
+            <img src="./images/illustration/il_womencloth.png" alt="">
           </div>
-          <p class="title-cat">Elektronik</p>
+          <p class="title-cat">Fashion Wanita</p>
         </div>
         <div class="item-cat">
           <div class="image-cat">
-            <img src="./images/category/category-3.jpg" alt="">
+            <img src="./images/illustration/il_toy.png" alt="">
           </div>
-          <p class="title-cat">Perkakas</p>
+          <p class="title-cat">Mainan</p>
         </div>
         <div class="item-cat">
           <div class="image-cat">
-            <img src="./images/category/category-1.jpg" alt="">
+            <img src="./images/illustration/il_camera.png" alt="">
           </div>
-          <p class="title-cat">Memasak</p>
+          <p class="title-cat">Kamera</p>
         </div>
       </div>
     </div>
@@ -329,13 +337,13 @@
   <script>
     $('#owl-carousel-02').owlCarousel({
     loop:false,
-    margin:30,
+    margin:20,
     nav:false,
     dots: false,
     responsive:{
         0:{
             items:2,
-            margin:15
+            margin:8
         },
         600:{
             items:2,
@@ -353,13 +361,13 @@
 <script>
   $('#owl-carousel-03').owlCarousel({
   loop:false,
-  margin:30,
+  margin:20,
   nav:false,
   dots: false,
   responsive:{
       0:{
           items:2,
-          margin:15
+          margin:8
       },
       600:{
           items:2,
