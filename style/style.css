@@ -220,6 +220,20 @@ body{
   .header-carousel .container{
     padding: 0;
   }
+
+  .header-carousel .owl-carousel .owl-dots{
+    bottom: 10px;
+  }
+
+  .header-carousel .owl-carousel .owl-dots .owl-dot.active span{
+    height: 12px;
+    width: 12px;
+  }
+
+  .header-carousel .owl-carousel .owl-dots span{
+    height: 10px;
+    width: 10px;
+  }
 }
 
 /* End Header Carousel */
