@@ -4,6 +4,10 @@ html, body{
   overflow-x: hidden;
 }
 
+a{
+  text-decoration: none;
+}
+
 *{
   font-family: 'Lato', sans-serif;
   box-sizing: border-box;
@@ -45,10 +49,7 @@ html, body{
 }
 
 .top-bar-section .top-bar-contain{
-  /* display: flex; */
   flex-direction: row;
-  align-items: center;
-  /* justify-content: space-between; */
   padding: 12px 0;
 }
 
@@ -56,16 +57,6 @@ html, body{
   font-size: 16px;
   font-weight: 400;
   color: #fff;
-  margin-bottom: 0;
-}
-
-/* .top-bar-section .top-bar-contain span{
-} */
-
-@media only screen and ( max-width : 991px ){
-  .top-bar-section .top-bar-contain h3{
-    text-align: center;
-  }
 }
 /* End : Top Bar */
 
@@ -76,25 +67,18 @@ html, body{
 }
 
 .navbar-section .navbar-contain .search-navbar{
-  background: var(--white);
+  /* background: var(--white); */
   padding: 12px 12px 12px 12px;
-  border-radius: 24px;
+  /* border-radius: 24px; */
   width: 37%;
-  align-items: center;
+  /* align-items: center; */
   box-shadow: 5px 5px 0px rgba(0, 0, 0, .3);
 }
 
-@media only screen and ( max-width: 767px ){
-  .navbar-section .navbar-contain .search-navbar{
-    width: 100%;
-    margin-top: 10px;
-  }
-}
-
 .navbar-section .navbar-contain .search-navbar input{
-  border: none;
-  width: 100%;
-  margin-right: 5px;
+  /* border: none; */
+  /* width: 100%; */
+  /* margin-right: 5px; */
 }
 
 .navbar-section .navbar-contain .search-navbar input:focus{
@@ -102,14 +86,14 @@ html, body{
 }
 
 .navbar-section .navbar-contain .search-navbar button{
-  height: 100%;
+  /* height: 100%; */
   background: var(--green);
   color: #fff;
-  border: none;
-  align-items: center;
-  padding-right: 13px;
-  border-right: 1px solid var(--AccentGray02);
-  margin-right: 13px;
+  /* border: none; */
+  /* align-items: center; */
+  /* padding-right: 13px; */
+  border-right: 1px solid var(--AccentGray02) !important;
+  /* margin-right: 13px; */
 }
 
 .navbar-section .navbar-contain .search-navbar button:focus{
@@ -143,6 +127,11 @@ html, body{
   margin-right: 14px;
 }
 
+.navbar-section .navbar-contain a.keranjang:hover,
+.navbar-section .navbar-contain a.user-profile:hover{
+  background-color: #eec409;
+}
+
 .navbar-section .navbar-contain a.keranjang img,
 .navbar-section .navbar-contain a.user-profile img{
   margin-right: 10px;
@@ -158,6 +147,23 @@ html, body{
   padding: 5px 15px;
   white-space: nowrap;
   display: flex;
+}
+@media only screen and ( max-width: 991px ){
+  .navbar-section .navbar-contain .search-navbar{
+    width: 60%;
+    padding: 8px;
+  }
+  .navbar-section .navbar-contain a.keranjang img,
+  .navbar-section .navbar-contain a.user-profile img{
+    margin-right: 0;
+  }
+}
+
+@media only screen and ( max-width: 767px ){
+  .navbar-section .navbar-contain .search-navbar{
+    width: 100%;
+    margin-top: 10px;
+  }
 }
 /* End Navbar */
 
@@ -212,6 +218,25 @@ html, body{
   margin: 3px 14px;
 }
 
+@media only screen and (max-width: 767px){
+  /* .navbar-section .navbar-contain .logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  } */
+  
+  .navbar-section .navbar-contain .logo img{
+    object-fit: cover;
+    object-position: center;
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    min-height: 45px;
+    border-radius: 50%;
+    margin-right: 14px;
+  }
+}
+
 @media only screen and (max-width: 567px ){
   .header-carousel .container{
     padding: 0;
@@ -234,6 +259,12 @@ html, body{
   .header-carousel .owl-carousel .owl-dots .owl-dot span{
     margin: 3px 8px;
   }
+
+  .header-carousel .owl-carousel .owl-stage{
+    padding-bottom: 33%;
+  }
+
+  .header-carousel .owl-carousel .owl-stage
 }
 
 /* End Header Carousel */
@@ -241,8 +272,8 @@ html, body{
 /* Start Category */
 .category{
   background-color: var(--AccentGray04);
-  padding: 43px 0 33px 0;
-  margin-bottom: 52px;
+  /* padding: 43px 0 33px 0; */
+  /* margin-bottom: 52px; */
 }
 
 .category .item-cat{
@@ -250,9 +281,16 @@ html, body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: calc( 100% / 9 - 20px);
-  border-radius: 20px;
+  width: calc( 100% / 9 - 10px);
   overflow: hidden;
+  padding: 5px;
+  transition: all;
+  transition-duration: .2s;
+  border-radius: 5px;
+}
+
+.category .item-cat:hover{
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, .1);
 }
 
 .category .item-cat .image-cat{
@@ -277,33 +315,46 @@ html, body{
 }
 
 @media only screen and ( max-width: 991px ){
+  .category{
+    padding: 20px 0 !important;
+  }
   .category .list-category{
-    white-space: nowrap;
     overflow-x: scroll;
   }
 
   .category .item-cat{
-    min-width: calc( 100% / 5 - 20px);
-    margin-right: 20px;
+    min-width: calc( 100% / 8 - 10px);
+    margin-right: 0;
     box-shadow: none;
+  }
+
+  .category .item-cat .image-cat{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--AccentGray01);
   }
 
   .category .item-cat:last-child{
     margin-right: 0;
   }
+
+  .category .item-cat p{
+    font-size: 12px;
+  }
 }
 
 @media only screen and ( max-width: 767px ){
   .category .item-cat{
-    min-width: calc( 100% / 4 - 20px);
-    margin-right: 20px;
+    min-width: calc( 100% / 6 - 0px);
   }
 }
 
 @media only screen and ( max-width: 575px ){
   .category .item-cat{
-    min-width: calc( 100% / 3 - 20px);
-    margin-right: 20px;
+    min-width: calc( 100% / 4 );
+    margin-right: 5px;
   }
 
   .category .container{
@@ -314,21 +365,25 @@ html, body{
   .category .list-category{
     padding: 0 20px;
   }
+
+  .category .item-cat p{
+    font-size: 10px;
+  }
 }
 /* End List Category */
 
 /* Start List New Product */
 .new-product .container{
-  padding-bottom: 65px;
+  /* padding-bottom: 65px; */
   border-bottom: 1px solid var(--AccentGray01);
 }
 
 .new-product{
-  margin-bottom: 35px;
+  /* margin-bottom: 35px; */
 }
 
 .recommendation-product{
-  margin-bottom: 82px;
+  /* margin-bottom: 82px; */
 }
 
 .new-product .title,
@@ -336,7 +391,7 @@ html, body{
 .wawasan-usaha .title{
   font-size: 23px;
   font-weight: 600;
-  margin-bottom: 54px;
+  /* margin-bottom: 54px; */
   color: #000;
   text-transform: uppercase;
   
@@ -347,9 +402,15 @@ html, body{
 {
   box-shadow: 0px 2px 7px rgba(0, 0, 0, .1);
   border-radius: 10px;
-  cursor: pointer;
   overflow: hidden;
   margin: 15px 0;
+  transition: all;
+  transition-duration: .3s;
+}
+
+.new-product .list-new-product .item-new-product:hover,
+.recommendation-product .list-recommendation-product .item-recommendation-product:hover{
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, .3);
 }
 
 .new-product .list-new-product .item-new-product .bg-image,
@@ -389,6 +450,8 @@ html, body{
   position: relative;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  cursor: pointer;
+  min-height: 185px;
 }
 
 .new-product .list-new-product .item-new-product .desc-new-product h1,
@@ -408,9 +471,6 @@ html, body{
 .new-product .list-new-product .item-new-product .desc-new-product .price,
 .recommendation-product .list-recommendation-product .item-recommendation-product .desc-recommendation-product .price
 {
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: row;
   align-items: flex-end;
   justify-content: space-between;
 }
@@ -420,6 +480,11 @@ html, body{
   font-size: 20px;
   font-weight: 700;
   color: var(--AccentPurple01);
+
+  overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   text-align: start;
 }
 
 .desc-new-product .price h3,
@@ -428,6 +493,11 @@ html, body{
   font-weight: 700;
   color: var(--AccentRed);
   text-decoration: line-through;
+
+  overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   text-align: start;
 }
 
 .new-product .list-new-product .item-new-product .desc-new-product .alamat-toko,
@@ -435,6 +505,7 @@ html, body{
 .desc-recommendation-product .alamat-toko{
   display: flex;
   flex-direction: row;
+  margin-top: auto;
 }
 
 .desc-new-product .alamat-toko img,
@@ -450,6 +521,11 @@ html, body{
   font-weight: 700;
   color: var(--AccentGray02);
   margin-bottom: 0;
+
+  overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   text-align: start;
 }
 
 .like-n-add-to-cart{
@@ -458,6 +534,7 @@ html, body{
   position: absolute;
   bottom: 0px;
   width: 100%;
+  
 }
 
 .like-n-add-to-cart .like{
@@ -481,7 +558,7 @@ html, body{
 .like-n-add-to-cart .add-to-cart{
   flex-basis: 70%;
   border: none;
-  padding: 33px 0 13px 0;
+  padding: 25px 13px 13px 13px;
   background-color: var(--AccentDarkGray02);
   color: var(--white);
   font-size: 15px;
@@ -490,6 +567,19 @@ html, body{
   align-items: center;
   justify-content: center;
 }
+
+.like-n-add-to-cart .add-to-cart #tambahkeranjang,
+.like-n-add-to-cart .add-to-cart span{
+  overflow: hidden;
+  white-space: nowrap;
+  /* text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  /* -webkit-box-orient: vertical;
+  text-align: start;  */
+}
+
+
 
 .like-n-add-to-cart button.add-to-cart:hover{
   background-color: var(--AccentGreen01);
@@ -511,14 +601,30 @@ html, body{
 
 #tambahkeranjang.active{
   color: var(--AccentGreen01);
+  /* overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 1; /* number of lines to show */
+   /* -webkit-box-orient: vertical; */
+   text-align: start;
 }
 
 button.add-to-cart:hover #tambahkeranjang.active{
   color: var(--white);
 }
 
-@media only screen and (max-width: 575px){
+@media only screen and (max-width: 767px){
+  .new-product .list-new-product .item-new-product .desc-new-product,
+  .recommendation-product .list-recommendation-product .item-recommendation-product .desc-recommendation-product
+  {
+    min-height: 175px;
+  }
 
+  .new-product .list-new-product .item-new-product .desc-new-product,
+  .recommendation-product .list-recommendation-product .item-recommendation-product .desc-recommendation-product
+  {
+    padding: 15px;
+  }
   .like-n-add-to-cart .like{
     flex-basis: 50%;
   }
@@ -528,53 +634,57 @@ button.add-to-cart:hover #tambahkeranjang.active{
   }
 
   .like-n-add-to-cart .add-to-cart span{
-    display: none;
+    display: none !important;
   }
 
   .like-n-add-to-cart .add-to-cart img{
     margin-right: 0;
   }
 }
+
+@media only screen and (max-width: 575px){
+  /* .new-product .list-new-product .item-new-product .desc-new-product h1,
+  .recommendation-product .list-recommendation-product .item-recommendation-product .desc-recommendation-product h1{
+    font-size: 15px;
+  }
+
+  .desc-new-product .price h2,
+  .desc-recommendation-product .price h2{
+    font-size: 16px;
+  }
+
+  .desc-new-product .price h3,
+  .desc-recommendation-product .price h3{
+    font-size: 12px;
+  } */
+}
 /* End List New Product */
 
 /* Start : Wawasan Usaha */
 .wawasan-usaha{
   background: var(--AccentGray04);
-  padding: 44px 0 75px 0;
-}
-
-.wawasan-usaha .list-item-wawasan-usaha{
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  /* padding: 44px 0 75px 0;   */
 }
 
 .wawasan-usaha .item-wawasan-usaha{
-  padding: 0;
+  /* padding: 0; */
   box-shadow: 5px 5px 5px rgba(0, 0, 0, .15);
   background: var(--white);
   width: calc(100% / 3 - 20px);
-  display: flex;
+  /* display: flex; */
+  transition: all;
+  transition-duration: .3s;
+}
+
+.wawasan-usaha .item-wawasan-usaha:hover{
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, .3);
 }
 
 .item-wawasan-usaha .image{
-  height: 100%;
   width: auto;
   overflow: hidden;
-  margin-right: 14px;
   min-width: 150px;  
   min-height: 150px;  
-}
-
-.item-wawasan-usaha .image img{
-  height: 100%;
-  width: 100%;
-}
-
-.item-wawasan-usaha .desc-wawasan-usaha{
-  display: flex;
-  flex-direction: column;
-  padding: 13px 13px 13px 0;
 }
 
 .item-wawasan-usaha .desc-wawasan-usaha .title{
@@ -592,6 +702,12 @@ button.add-to-cart:hover #tambahkeranjang.active{
   font-size: 16px;
   font-weight: 400;
   color: var(--AccentDarkGray01);
+
+  overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 1; /* number of lines to show */
+   -webkit-box-orient: vertical;
 }
 
 .item-wawasan-usaha .desc-wawasan-usaha .date-artikel{
@@ -618,7 +734,7 @@ button.add-to-cart:hover #tambahkeranjang.active{
 /* START: Footer */
 footer{
   background: var(--AccentDarkGray01);
-  padding: 50px 0;
+  /* padding: 50px 0; */
 }
 
 footer .copyright{

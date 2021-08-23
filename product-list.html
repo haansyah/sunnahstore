@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sunnah Store ID</title>
+
+  <link rel="stylesheet" href="./libraries/bootstrap/510/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./libraries/owl-carousel/2234/dist/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="./libraries/owl-carousel/2234/dist/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+  <!-- START: Top Bar -->
+  <div class="top-bar-section">
+    <div class="container">
+      <div class="top-bar-contain justify-content-lg-between justify-content-center d-flex">
+        <h3>Ayo bergabung menjadi penjual di sunnahstore.id slot terbatas!!!</h3>
+        <h4 class="d-lg-block d-none">Selamat Datang, <span>Akhyar</span></h4>
+      </div>
+    </div>
+  </div>
+  <!-- END: Top Bar -->
+
+  <!-- START: Navbar -->
+  <div class="navbar-section">
+    <div class="container">
+      <div class="navbar-contain d-flex justify-content-between align-items-center flex-wrap flex-md-nowrap">
+
+        <div class="logo order-1">
+          <img src="./images/logo.png" alt="">
+          <h5>SUNNAH STORE</h5>
+        </div>
+
+        <form class="form d-flex search-navbar order-3 order-md-2">
+          <button class="search d-flex"><img src="./images/ic_search.svg" alt=""></button>
+          <input type="text" placeholder="Cari produk disini">
+        </form>
+
+        <div class="d-flex order-2 order-md-3">
+          <a href="#" class="keranjang">
+            <img src="./images/Group 641.svg" alt="keranjang"><span>Keranjang</span>
+          </a>
+  
+          <a href="#" class="user-profile">
+            <img src="./images/User.svg" alt="user"><span>Akhyar Maulana</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- END: Navbar -->
+
+  <!-- START : Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="copyright"> © 2021 SUNNAHSTORE.ID | All rights reserved | Privacy Policy Terms of Use Cookies Policy </p>
+    </div>
+  </footer>
+  <!-- END : Footer -->
+
+  <script src="./query.min.js"></script>
+  <script src="./libraries/bootstrap/510/js/bootstrap.min.js"></script>
+  <script src="./libraries/owl-carousel/2234/dist/owl.carousel.min.js"></script>
+  <script>
+    $('#owl-carousel-01').owlCarousel({
+    loop:true,
+    margin:0,
+    nav:false,
+    autoplay: true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+            }
+        }
+    });
+  </script>
+
+  <script>
+    $('#owl-carousel-02').owlCarousel({
+    loop:false,
+    margin:20,
+    nav:false,
+    dots: false,
+    responsive:{
+        0:{
+            items:2,
+            margin:12
+        },
+        600:{
+            items:2,
+        },
+        768:{
+          items:2
+        },
+        991:{
+          items: 3
+        },
+        1200:{
+            items:4
+            }
+        }
+    });
+  </script>
+
+<script>
+  $('#owl-carousel-03').owlCarousel({
+  loop:false,
+  margin:20,
+  nav:false,
+  dots: false,
+  responsive:{
+        0:{
+          items:2,
+          margin:12
+        },
+        600:{
+            items:2,
+        },
+        768:{
+          items:2
+        },
+        991:{
+          items: 3
+        },
+        1200:{
+            items:4
+        }
+      }
+  });
+</script>
+
+<script>
+  function AddToCart() {
+    if(document.getElementById("tambahkeranjang").classList.contains("active")){
+      document.getElementById("check-add-to-cart").src = "./images/icons/ic_addcart.svg";
+      document.getElementById("tambahkeranjang").classList.remove("active");
+      document.getElementById("tambahkeranjang").textContent = "Tambah Keranjang";
+    } else{
+      document.getElementById("tambahkeranjang").textContent = "Berhasil ditambahkan";
+      document.getElementById("check-add-to-cart").src = "./images/icons/ic_check.svg";
+      document.getElementById("tambahkeranjang").classList.add("active");
+    }
+  }
+
+  function AddToWishlist() {
+    if(document.getElementById("likeBtn").classList.contains("active")){
+      document.getElementById("likeBtn").src = "./images/icons/ic_love.svg";
+      document.getElementById("likeBtn").classList.remove("active");
+    } else{
+      document.getElementById("likeBtn").src = "./images/icons/ic_love_red.svg";
+      document.getElementById("likeBtn").classList.add('active');
+    }
+  }
+</script>
+</body>
+</html>
